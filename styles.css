@@ -1,0 +1,154 @@
+/* font-family: 'Inter', sans-serif; */
+
+*,
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(255,255,255,0) !important;
+  outline: none !important;
+}
+
+body {
+  background: #000;
+}
+
+header {
+  display: flex;
+  width: 100vw;
+  height: 14vh;
+  align-items: center;
+  position: absolute;
+  z-index: 999;
+}
+
+.navbar {
+  padding-right: 52px;
+  width: 100%;
+}
+
+.nav_name {
+  color: #fff;
+  font-size: 4vh;
+  font-weight: 700;
+  letter-spacing: 1.71px;
+  padding-left: 21px;
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  height: 100%;
+  color: #d6d6d6;
+  font-size: 2vh;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 121.023%;
+  letter-spacing: 1.71px;
+  width: 100%;
+  padding-left: 2%;
+  gap: 2.8%;
+  background: transparent;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: stretch;
+  flex-wrap: nowrap;
+}
+
+li {
+  background-color: transparent;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+a:after {
+  content: "";
+  position: absolute;
+  background-color: #FA4444;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+a:hover:after,
+a.active:after {
+  width: 110%;
+}
+
+@media only screen and (max-width:800px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    padding-right: 30px;
+  }
+
+  .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 6px 0;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 11vh;
+    right: 0;
+    left: 0;
+    width: 100vw;
+    backdrop-filter: blur(70.2711px);
+    transition: 0.3s;
+    height: 0px;
+    overflow: hidden;
+    padding-right: 0px;
+
+  }
+
+  .navbar ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    opacity: 0;
+  }
+
+  .navbar ul li a {
+    margin-bottom: 12px;
+  }
+
+  .navbar.active {
+    height: 450px;
+  }
+
+  .navbar.active ul {
+    opacity: 1;
+    display: flex;
+  }
+
+  header {
+    justify-content: space-between;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    height: 82%;
+    gap: 5vh;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+  }
+}
