@@ -1,10 +1,7 @@
 
 // UNDERLINE UNDER NAVBAR
-// UNDERLINE UNDER NAVBAR
-// UNDERLINE UNDER NAVBAR
-// UNDERLINE UNDER NAVBAR
-// UNDERLINE UNDER NAVBAR
-// UNDERLINE UNDER NAVBAR
+// hello
+
 const navItems = document.querySelectorAll('.nav-item');
 navItems.forEach(navItem => {
   navItem.addEventListener('click', () => {
