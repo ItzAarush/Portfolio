@@ -55,3 +55,25 @@ window.addEventListener("scroll", function(){
   var header = document.querySelector("header");
   header.classList.toggle("sticky", window.scrollY > 0)
 })
+
+// Smooth scroll behavior for the entire page
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+// Track if the user has already scrolled
+var hasScrolled = false;
+
+// Function to handle the scroll event
+function handleScroll() {
+  if (!hasScrolled) {
+    scrollToTop();
+    hasScrolled = true;
+  }
+}
+
+// Attach the scroll event listener to the window
+window.addEventListener("scroll", handleScroll);

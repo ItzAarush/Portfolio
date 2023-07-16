@@ -1,1 +1,9 @@
-00FF7F green color
+animation: floatUpDown 1.8s ease-in-out infinite alternate;
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
