@@ -13,20 +13,34 @@ body {
 
 body {
   background: #000;
+  overflow-x: hidden;
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+body::-webkit-scrollbar {
+  display: none !important;
 }
 
 header {
   display: flex;
   width: 100vw;
-  height: 14vh;
+  height: 100px;
   align-items: center;
-  position: absolute;
+  position: fixed;
   z-index: 999;
+  
+}
+
+header.sticky{
+  transition: 0.3s ease-in;
+  /* backdrop-filter: blur(5px); */
 }
 
 .navbar {
   padding-right: 52px;
   width: 100%;
+  /* backdrop-filter: blur(70.2711px); */
 }
 
 .nav_name {
@@ -75,7 +89,7 @@ a:after {
   background-color: #FA4444;
   height: 3px;
   width: 0;
-  left: 0;
+  left: -2px;
   bottom: -10px;
   transition: 0.3s;
 }
@@ -110,12 +124,11 @@ a.active:after {
     right: 0;
     left: 0;
     width: 100vw;
-    backdrop-filter: blur(70.2711px);
+    backdrop-filter: blur(70.2711px) !important;
     transition: 0.3s;
     height: 0px;
     overflow: hidden;
     padding-right: 0px;
-
   }
 
   .navbar ul {
@@ -123,6 +136,7 @@ a.active:after {
     width: fit-content;
     margin: 80px auto 0 auto;
     opacity: 0;
+
   }
 
   .navbar ul li a {
@@ -141,6 +155,7 @@ a.active:after {
   header {
     justify-content: space-between;
   }
+  
 
   ul {
     display: flex;

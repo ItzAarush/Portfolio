@@ -1,7 +1,5 @@
 
 // UNDERLINE UNDER NAVBAR
-// hello
-
 const navItems = document.querySelectorAll('.nav-item');
 navItems.forEach(navItem => {
   navItem.addEventListener('click', () => {
@@ -50,3 +48,10 @@ floatingElements.forEach(element => {
     element.style.animationPlayState = 'running';
   });
 });
+//----------------------------------------------------------------------------------------------
+
+// MOVING NAVBAR 
+window.addEventListener("scroll", function(){
+  var header = document.querySelector("header");
+  header.classList.toggle("sticky", window.scrollY > 0)
+})
