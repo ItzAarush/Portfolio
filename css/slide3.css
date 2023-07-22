@@ -87,31 +87,38 @@
 
 @media screen and (max-width:1200px) {
     .card {
-        width: 26vw;
+        width: 28vw;
         height: 49vw;
     }
 }
 
 @media screen and (max-width:750px) {
+    .slide3 {
+        padding-top: 14vw;
+    }
+    
     .cards {
         gap: 30px;
         justify-content: center;
         align-content: center;
-        padding-top: 24vw;
     }
-
+    
     .card {
         width: 40vw;
+        height: 34vw;
     }
 }
 
 @media screen and (max-width:500px) {
+    .slide3 {
+        padding-top: 24vw;
+    }
     .cards {
         flex-direction: column;
     }
 
     .card {
-        width: 60vw;
+        width: 44vw;
         height: 40vw;
     }
 }

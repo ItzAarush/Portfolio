@@ -81,7 +81,7 @@
   right: 15%;
   align-items: center;
   justify-content: flex-end;
-  animation: floatUpDown 1.8s ease-in-out infinite alternate;
+  animation: floatUpDown 1.4s ease-in-out infinite alternate;
 }
 
 .transparent_section_1 svg {
