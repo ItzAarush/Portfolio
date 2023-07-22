@@ -165,3 +165,9 @@
     }
 
 }
+
+@media only screen and (max-width:420px) {
+    .eclipses {
+        justify-content:inherit;
+    }
+}
