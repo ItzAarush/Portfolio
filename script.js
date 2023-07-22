@@ -56,3 +56,9 @@ window.addEventListener("scroll", function(){
   header.classList.toggle("sticky", window.scrollY > 0)
 })
 
+// MOVING CARDS 
+
+VanillaTilt.init(document.querySelectorAll(".card"), {
+  max: 25,
+  speed: 400
+});
