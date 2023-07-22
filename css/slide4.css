@@ -43,6 +43,11 @@
     transition: 0.1s;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 .ContactButton:hover{
     box-shadow: 0px 4px 151px 56px rgba(250, 68, 68, 0.40);
     background: #f65c5c;
