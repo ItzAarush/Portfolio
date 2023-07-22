@@ -183,6 +183,11 @@
 }
 
 @media screen and (max-width:550px) {
+
+  .slide1{
+    align-items: center;
+  }
+
   .transparent_section_1 svg {
     display: none;
   }
