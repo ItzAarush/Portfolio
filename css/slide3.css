@@ -1,18 +1,18 @@
-.slide3 .red_blur_circle {
+#slide3 .red_blur_circle {
     position: relative;
 }
 
-.slide3 .blur_bottm_right {
+#slide3 .blur_bottm_right {
     right: -58%;
     bottom: -8%;
     filter: blur(18em);
 }
 
-.slide3 .blur_top_left {
+#slide3 .blur_top_left {
     filter: blur(18em);
 }
 
-.slide3 {
+#slide3 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,7 +93,7 @@
 }
 
 @media screen and (max-width:750px) {
-    .slide3 {
+    #slide3 {
         padding-top: 14vw;
     }
     
@@ -110,7 +110,7 @@
 }
 
 @media screen and (max-width:500px) {
-    .slide3 {
+    #slide3 {
         padding-top: 24vw;
     }
     .cards {
