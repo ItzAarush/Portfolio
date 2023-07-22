@@ -16,15 +16,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 6vw 0;
 }
 
 .cards {
     display: flex;
     width: 100vw;
-    height: 100vh;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
+    gap: 7vw;
+    justify-content: center;
+
 }
 
 .card {
