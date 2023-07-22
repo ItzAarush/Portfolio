@@ -105,9 +105,6 @@
 
 
 @media screen and (max-width:750px) {
-    #slide3 {
-        padding-top: 14vw;
-    }
 
     .cards {
         gap: 30px;
