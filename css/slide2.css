@@ -42,11 +42,12 @@
     width: 20vw;
     height: 20vw;
     border-radius: 1013px;
-    border: 1px solid #fa4444;
-    box-shadow: rgb(250 68 68) 0px 0px 100px 36px;
+    border: 1px solid #fa4444d1;
+    box-shadow: rgb(250 68 68) 0px 0px 500px 13px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #000000a3;
 }
 
 .about_eclipse1 {
@@ -112,7 +113,7 @@
     #slide2 {
         flex-direction: column;
         flex-wrap: nowrap;
-        justify-content: flex-end;
+        padding-top: 5vw;
     }
 
     .eclipses {
