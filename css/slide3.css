@@ -107,6 +107,11 @@
         width: 40vw;
         height: 34vw;
     }
+
+    .card_head, .card_desc{
+        opacity: 1;
+        transform: translateY(0vw);
+    }
 }
 
 @media screen and (max-width:500px) {
