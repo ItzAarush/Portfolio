@@ -113,7 +113,6 @@
     #slide2 {
         flex-direction: column;
         flex-wrap: nowrap;
-        padding-top: 5vw;
     }
 
     .eclipses {
