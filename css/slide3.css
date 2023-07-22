@@ -92,32 +92,39 @@
     }
 }
 
+@media screen and (max-width:900px) {
+
+    .card_head,
+    .card_desc {
+        opacity: 1;
+        transform: translateY(0vw);
+    }
+}
+
+
 @media screen and (max-width:750px) {
     #slide3 {
         padding-top: 14vw;
     }
-    
+
     .cards {
         gap: 30px;
         justify-content: center;
         align-content: center;
     }
-    
+
     .card {
         width: 40vw;
         height: 34vw;
     }
 
-    .card_head, .card_desc{
-        opacity: 1;
-        transform: translateY(0vw);
-    }
 }
 
 @media screen and (max-width:500px) {
     #slide3 {
         padding-top: 24vw;
     }
+
     .cards {
         flex-direction: column;
     }
