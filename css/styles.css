@@ -95,13 +95,13 @@ li {
   position: relative;
 }
 
-header a {
+.navbar a {
   text-decoration: none;
   color: white;
   display: block;
 }
 
-header a:after {
+.navbar a:after {
   content: "";
   position: absolute;
   background-color: #FA4444;
@@ -117,7 +117,7 @@ header a:hover {
   cursor: pointer;
 }
 
-header a:hover:after,
+.navbar a:hover:after,
 a.active:after {
   width: 110%;
 }
@@ -133,6 +133,23 @@ a.active:after {
 }
 
 .explore a{
+  text-decoration: none;
+  color: white;
+}
+
+.circle {
+  height: 24px;
+  width: 24px;
+  border-radius: 24px;
+  background-color: black;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999999; /* so that it stays on top of all other elements */
+}
+
+.nav_name a{
   text-decoration: none;
   color: white;
 }

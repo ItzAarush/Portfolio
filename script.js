@@ -56,12 +56,15 @@ window.addEventListener("scroll", function () {
   header.classList.toggle("sticky", window.scrollY > 0)
 })
 
+//----------------------------------------------------------------------------------------------
+
 // MOVING CARDS 
 
 VanillaTilt.init(document.querySelectorAll(".card"), {
   max: 25,
   speed: 400
 });
+//----------------------------------------------------------------------------------------------
 
 // Function to reset the form
 
@@ -73,3 +76,103 @@ formButton.addEventListener('click', () => {
     myForm.reset();
   }, 1000);
 });
+
+//----------------------------------------------------------------------------------------------
+
+// MOUSE 
+
+const coords = { x: 0, y: 0 };
+const circles = document.querySelectorAll(".circle");
+
+const colors = [
+  "#ffb56b",
+  "#fdaf69",
+  "#f89d63",
+  "#f59761",
+  "#ef865e",
+  "#ec805d",
+  "#e36e5c",
+  "#df685c",
+  "#d5585c",
+  "#d1525c",
+  "#c5415d",
+  "#c03b5d",
+  "#b22c5e",
+  "#ac265e",
+  "#9c155f",
+  "#950f5f",
+  "#830060",
+  "#7c0060",
+  "#680060",
+  "#60005f",
+  "#48005f",
+  "#3d005e"
+];
+
+circles.forEach(function (circle, index) {
+  circle.x = 0;
+  circle.y = 0;
+  circle.style.backgroundColor = colors[index % colors.length];
+});
+
+window.addEventListener("mousemove", function(e){
+  coords.x = e.clientX;
+  coords.y = e.clientY;
+  
+});
+
+function animateCircles() {
+  
+  let x = coords.x;
+  let y = coords.y;
+  
+  circles.forEach(function (circle, index) {
+    circle.style.left = x - 12 + "px";
+    circle.style.top = y - 12 + "px";
+    
+    circle.style.scale = (circles.length - index) / circles.length;
+    
+    circle.x = x;
+    circle.y = y;
+
+    const nextCircle = circles[index + 1] || circles[0];
+    x += (nextCircle.x - x) * 0.3;
+    y += (nextCircle.y - y) * 0.3;
+  });
+ 
+  requestAnimationFrame(animateCircles);
+}
+
+animateCircles();
+
+//----------------------------------------------------------------------------------------------
+
+const sections = document.querySelectorAll('div[id^="section"]');
+const navLinks = document.querySelectorAll('nav a');
+
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.5, // Adjust this value as needed
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // Get the ID of the currently visible section
+      const targetId = entry.target.getAttribute('id');
+
+      // Remove active class from all navbar links
+      navLinks.forEach((link) => link.classList.remove('active'));
+
+      // Add active class to the corresponding navbar link
+      const activeLink = document.querySelector(`nav a[href="#${targetId}"]`);
+      if (activeLink) {
+        activeLink.classList.add('active');
+      }
+    }
+  });
+}, 0.5);
+
+// Observe each section
+sections.forEach((section) => observer.observe(section));
