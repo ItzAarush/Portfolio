@@ -12,27 +12,27 @@ navItems.forEach(navItem => {
 
 //RESPONSIVE NAVBAR
 hamburger = document.querySelector(".hamburger");
-hamburger.onclick = function(){
-    navbar = document.querySelector(".navbar");
-    navbar.classList.toggle("active");
+hamburger.onclick = function () {
+  navbar = document.querySelector(".navbar");
+  navbar.classList.toggle("active");
 }
 //----------------------------------------------------------------------------------------------
 
 //EXPLORE BUTTON
 let box = document.querySelector(".explore");
 box.addEventListener('mousemove', (e) => {
-    let x = e.offsetX
-    let y = e.offsetY
-    let BoxWidth = box.clientWidth 
-    let BoxHeight = box.clientHeight
-    let moveX = (x - BoxWidth/2)
-    let moveY = (y - BoxHeight/2)
-    box.style.transform = `translateX(${moveX}px)
+  let x = e.offsetX
+  let y = e.offsetY
+  let BoxWidth = box.clientWidth
+  let BoxHeight = box.clientHeight
+  let moveX = (x - BoxWidth / 2)
+  let moveY = (y - BoxHeight / 2)
+  box.style.transform = `translateX(${moveX}px)
     translateY(${moveY}px)`;
-    
-    });
-    box.addEventListener('mouseout', (e) => {
-        box.style.transform = ``;
+
+});
+box.addEventListener('mouseout', (e) => {
+  box.style.transform = ``;
 })
 //----------------------------------------------------------------------------------------------
 
@@ -51,7 +51,7 @@ floatingElements.forEach(element => {
 //----------------------------------------------------------------------------------------------
 
 // MOVING NAVBAR 
-window.addEventListener("scroll", function(){
+window.addEventListener("scroll", function () {
   var header = document.querySelector("header");
   header.classList.toggle("sticky", window.scrollY > 0)
 })
@@ -61,4 +61,15 @@ window.addEventListener("scroll", function(){
 VanillaTilt.init(document.querySelectorAll(".card"), {
   max: 25,
   speed: 400
+});
+
+// Function to reset the form
+
+let myForm = document.getElementById('myForm');
+let formButton = document.getElementById('formButton');
+formButton.addEventListener('click', () => {
+
+  setInterval(() => {
+    myForm.reset();
+  }, 1000);
 });
