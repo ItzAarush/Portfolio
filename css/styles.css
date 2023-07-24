@@ -7,7 +7,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   cursor: pointer;
-  -webkit-tap-highlight-color: rgba(255,255,255,0) !important;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
   outline: none !important;
 }
 
@@ -23,13 +23,13 @@ body {
   height: 100vh;
 }
 
-section{
+section {
   scroll-snap-align: start;
   height: 100vh;
   overflow: hidden;
 }
 
-.container{
+.container {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -47,18 +47,16 @@ header {
   align-items: center;
   position: fixed;
   z-index: 999;
-  
+
 }
 
-header.sticky{
+header.sticky {
   transition: 0.3s ease-in;
-  /* backdrop-filter: blur(5px); */
 }
 
 .navbar {
   padding-right: 52px;
   width: 100%;
-  /* backdrop-filter: blur(70.2711px); */
 }
 
 .nav_name {
@@ -132,7 +130,7 @@ a.active:after {
   z-index: -1;
 }
 
-.explore a{
+.explore a {
   text-decoration: none;
   color: white;
 }
@@ -142,14 +140,15 @@ a.active:after {
   width: 24px;
   border-radius: 24px;
   background-color: black;
-  position: fixed; 
+  position: fixed;
   top: 0;
   left: 0;
   pointer-events: none;
-  z-index: 99999999; /* so that it stays on top of all other elements */
+  z-index: 99999999;
+  /* so that it stays on top of all other elements */
 }
 
-.nav_name a{
+.nav_name a {
   text-decoration: none;
   color: white;
 }
@@ -179,6 +178,9 @@ a.active:after {
     height: 0px;
     overflow: hidden;
     padding-right: 0px;
+    -webkit-backdrop-filter: blur(70.2711px);
+    -moz-backdrop-filter: blur(70.2711px);
+    -webkit-backdrop-filter: blur(70.2711px);
   }
 
   .navbar ul {
@@ -205,7 +207,7 @@ a.active:after {
   header {
     justify-content: space-between;
   }
-  
+
 
   ul {
     display: flex;
@@ -217,4 +219,3 @@ a.active:after {
     display: flex;
   }
 }
-

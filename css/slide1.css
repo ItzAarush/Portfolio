@@ -83,6 +83,9 @@
   align-items: center;
   justify-content: flex-end;
   animation: floatUpDown 1.4s ease-in-out infinite alternate;
+  -webkit-backdrop-filter: blur(70.2711px);
+  -moz-backdrop-filter: blur(70.2711px);
+  -webkit-backdrop-filter: blur(70.2711px);
 }
 
 .transparent_section_1 svg {

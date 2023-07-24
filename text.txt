@@ -1,1 +1,0 @@
-navbar not updating on page change
