@@ -147,7 +147,7 @@ animateCircles();
 
 //----------------------------------------------------------------------------------------------
 
-const sections = document.querySelectorAll('div[id^="section"]');
+const sections = document.querySelectorAll('#slide1, #slide2, #slide3, #slide4');
 const navLinks = document.querySelectorAll('nav a');
 
 const observerOptions = {
@@ -172,7 +172,23 @@ const observer = new IntersectionObserver((entries) => {
       }
     }
   });
-}, 0.5);
+}, observerOptions);
 
 // Observe each section
 sections.forEach((section) => observer.observe(section));
+
+
+// Add smooth scroll behavior when a navbar link is clicked
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', function (event) {
+    event.preventDefault();
+    const targetId = link.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  });
+});
